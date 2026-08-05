@@ -1,0 +1,28 @@
+{
+    "employeelist" : [
+
+        {
+            "id" :  101,
+            "first name" : "John",
+            "LAst Namr" : "Bason",
+            "department" : "HR"
+        },
+        {
+            "id" : "102",
+            "First Name" : "Mr. PBC",
+            "Last Name" : "MXZ",
+            "department" : "IT" 
+        },
+        {
+            "id" : "103",
+            "First Name" : "Mr. ABC",
+            "Last Name" : "XYZ",
+            "department" : "Admin" 
+        
+        }
+    ]   
+
+
+}
+
+
