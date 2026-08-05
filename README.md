@@ -1,34 +1,36 @@
-# PowerShell Labs
+# PowerShell Working with XML
 
-Hands-on Windows PowerShell labs. Each folder is one lab, with the commands
-that were run, screenshots of the output, and a write-up.
+This project demonstrates how to use PowerShell to load, query, modify, and export XML data. The lab uses fictional student data to practice XML parsing, updating records, removing records, and exporting XML data to CSV format.
 
-## Labs
+## Skills Demonstrated
 
-| # | Lab | Topics |
-|---|---|---|
-| 01 | [Introduction](01-introduction/) | CMD to PowerShell command mapping, file system navigation, creating and deleting files |
+* PowerShell scripting
+* XML data parsing
+* Data modification
+* CSV export
+* File and folder organization
+* Basic automation workflow
 
-## How the labs are organized
+## Tools Used
 
+* PowerShell
+* Visual Studio Code
+* Windows 11
+* GitHub
+
+## Project Structure
+
+```text
+PowerShell-Working-with-XML/
+├── data/
+│   ├── students.xml
+│   └── students.csv
+├── docs/
+├── screenshots/
+├── scripts/
+│   ├── Task1-Query-XML.ps1
+│   ├── Task2-Modify-XML.ps1
+│   └── Task3-Export-XML-to-CSV.ps1
+└── README.md
 ```
-NN-lab-name/
-├── README.md      walkthrough with screenshots
-├── commands/      the commands used, as typed
-├── screenshots/   terminal output for each step
-└── docs/          lab write-up (docx and pdf)
-```
 
-Commands were run directly in the terminal. The files in each `commands/`
-folder are a copy of what was typed, kept for reference.
-
-## Setup
-
-Windows 10 or 11. No admin rights needed.
-
-Paths in the labs use `<YourUsername>`. Replace it with your own Windows
-account name. Run `echo %USERNAME%` if you are not sure what it is.
-
-## License
-
-MIT. See [LICENSE](LICENSE).
