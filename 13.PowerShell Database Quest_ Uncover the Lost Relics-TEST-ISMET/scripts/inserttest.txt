@@ -1,0 +1,35 @@
+# Your adventurer name - customize this!
+$myAdventurerName = "Aethor the Scriptweaver"
+
+# Connection string to the SQL Server
+$connectionString = "Server=localhost;Database=master;Trusted_Connection=True;"
+$connection = New-Object System.Data.SqlClient.SqlConnection
+$connection.ConnectionString = $connectionString
+
+# SQL INSERT command
+$insertQuery = "INSERT INTO Adventurers (Name) VALUES (@Name)"
+
+try {
+    # Open the mystical portal (DB connection)
+    $connection.Open()
+
+    # Prepare your insertion spell
+    $command = $connection.CreateCommand()
+    $command.CommandText = $insertQuery
+
+    # Add your name as a parameter to protect against SQL goblins (injection attacks)
+    $nameParam = $command.Parameters.Add("@Name", [System.Data.SqlDbType]::NVarChar, 100)
+    $nameParam.Value = $myAdventurerName
+
+    # Cast the spell (execute)
+    $rowsAffected = $command.ExecuteNonQuery()
+    Write-Host "`n✨ Success! '$myAdventurerName' has joined the quest with $rowsAffected record(s) inserted." -ForegroundColor Green
+}
+catch {
+    Write-Host "`n⚠️ Failed to insert adventurer name: $_" -ForegroundColor Red
+}
+finally {
+    if ($connection.State -eq 'Open') {
+        $connection.Close()
+    }
+}
